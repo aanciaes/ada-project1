@@ -11,7 +11,7 @@ public class Main {
 	}
 	
 	public static void readLines (BufferedReader reader) throws IOException{
-		
+				
 		String [] string_array = readLine(reader);
 		int num_tests = Integer.parseInt(string_array[0]);
 		
@@ -20,7 +20,7 @@ public class Main {
 				
 			BigOldDesert bod = new BigOldDesert(problem);
 			
-			System.out.println(bod.solve());
+			System.out.println((int)bod.solve(0,0));
 		}		
 	}
 	
