@@ -1,5 +1,3 @@
-import java.util.concurrent.SynchronousQueue;
-
 public class BigOldDesert {
 
 	public static final double INFINITY = Double.POSITIVE_INFINITY;
@@ -18,14 +16,12 @@ public class BigOldDesert {
 	public static final double BALLON_INT = 3;
 
 	private String [] problem;
-	public int calls;
 
 	public BigOldDesert (String [] problem){
 		this.problem = problem;
 	}
 
 	public double solve(double carrying, int currentPos) {
-		calls++;
 		if(currentPos<problem.length){
 			if(problem[currentPos].charAt(0)==PLAIN){
 				if(carrying==NOTHING){
