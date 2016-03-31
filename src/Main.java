@@ -12,21 +12,23 @@ public class Main {
 	
 	public static void readLines (BufferedReader reader) throws IOException{
 				
-		String [] string_array = readLine(reader);
+		String [] string_array = readLine(reader, "//s");
 		int num_tests = Integer.parseInt(string_array[0]);
 		
 		for (int i=0;i<num_tests;i++){
-			String [] problem = readLine(reader);
+			String [] problem = readLine(reader, "");
 				
 			BigOldDesert bod = new BigOldDesert(problem);
 			
-			System.out.println((int)bod.solve(0,0));
+			//System.out.println((int)bod.solveRecursively(0,0));
+			
+			System.out.println(bod.resolveIterative());
 		}		
 	}
 	
-	public static String [] readLine (BufferedReader reader) throws IOException {
+	public static String [] readLine (BufferedReader reader, String regex) throws IOException {
 		String line = reader.readLine();
-		String [] string_array = line.split("");
+		String [] string_array = line.split(regex);
 		return string_array;
 	}
 }
